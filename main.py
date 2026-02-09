@@ -1,7 +1,7 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
-from parser import load_excel_to_graph
-from schemas import ExtractionResponse
-import uvicorn
+from fastapi import FastAPI, UploadFile, File, HTTPException #type: ignore
+from xl_parser.parser import load_excel_to_graph
+from xl_parser.schemas import ExtractionResponse
+import uvicorn #type: ignore
 
 app = FastAPI(title="Excel -> Semantic Graph Pipeline")
 

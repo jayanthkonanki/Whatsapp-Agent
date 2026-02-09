@@ -1,8 +1,8 @@
-import pandas as pd
+import pandas as pd  #type: ignore
 from io import BytesIO
 from typing import List
-from schemas import TableGraph, CellNode, ColumnMetadata
-from profiler import generate_column_stats
+from xl_parser.schemas import TableGraph, CellNode, ColumnMetadata
+from xl_parser.profiler import generate_column_stats
 from typing import List
 
 def load_excel_to_graph(file_content: bytes, filename: str) -> List[TableGraph]:

@@ -1,5 +1,5 @@
-import pandas as pd
-from ydata_profiling import ProfileReport
+import pandas as pd #type: ignore
+from ydata_profiling import ProfileReport #type: ignore
 import json
 
 def generate_column_stats(df: pd.DataFrame) -> dict:
