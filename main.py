@@ -3,8 +3,16 @@ from xl_parser.parser import load_excel_to_graph
 from xl_parser.schemas import ExtractionResponse
 import uvicorn #type: ignore
 
+# Import the new WABA integration router
+from waba_integration.router import router as waba_router  
+
+#FastAPI setup
 app = FastAPI(title="Excel -> Semantic Graph Pipeline")
 
+# Include the WABA router
+app.include_router(waba_router)
+
+#Post request for excel parsing
 @app.post("/upload/excel", response_model=ExtractionResponse)
 async def upload_excel(file: UploadFile = File(...)):
     """

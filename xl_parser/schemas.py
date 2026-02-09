@@ -1,5 +1,5 @@
 from typing import List, Optional, Dict, Any, Union
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field  #type: ignore
 
 class CellNode(BaseModel):
     """Represents a single data point in the table graph."""
